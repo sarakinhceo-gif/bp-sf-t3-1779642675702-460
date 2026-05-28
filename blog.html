@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 블로그 | 서버 웜업 인사이트</title>
+    <meta name="description" content="마포 셔츠룸의 서버 웜업에 대한 날 것 그대로의 이야기. 속도, 공간, 경험의 재정의. 지금 웜업을 걸어라.">
+    <meta name="keywords" content="마포 셔츠룸, 서버 웜업, 블로그, 마포 웜업 리뷰, 셔츠룸 경험, 서버 웜업 마포">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-460.pages.dev/blog">
+    <meta property="og:title" content="마포 셔츠룸 블로그 - 서버 웜업의 새로운 기준">
+    <meta property="og:description" content="마포 셔츠룸의 서버 웜업에 대한 모든 것. 날 것 그대로의 리뷰와 인사이트. 010-6279-0862로 웜업을 걸어라.">
+    <meta property="og:url" content="https://sf-t3-1779642675702-460.pages.dev/blog">
+    <meta property="og:type" content="article">
+    <style>
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            background: #0a0a0a; 
+            color: #e0e0e0; 
+            line-height: 1.6; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+        }
+        a { color: #ff0066; text-decoration: none; font-weight: bold; }
+        a:hover { color: #fff; background: #ff0066; padding: 0.1rem 0.3rem; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 0.15em; }
+        h1 { font-size: 3rem; line-height: 1; color: #ff0066; margin-bottom: 1.5rem; text-shadow: 0 0 20px #ff0066; }
+        h2 { font-size: 2rem; color: #ffcc00; margin: 2rem 0 1rem; border-left: 6px solid #ff0066; padding-left: 1rem; }
+        h3 { font-size: 1.5rem; color: #fff; margin: 1.5rem 0 0.8rem; }
+        p, li { font-size: 1.1rem; margin-bottom: 1.2rem; }
+
+        /* BRUTALIST UTILITIES */
+        .brutal-border { border: 3px solid #ff0066; padding: 1.5rem; background: #111; }
+        .brutal-border-accent { border: 4px solid #ffcc00; padding: 1.5rem; background: #0d0d0d; }
+        .skewed { transform: skew(-5deg); }
+        .skewed-back { transform: skew(5deg); }
+        .ful { width: 100%; }
+
+        /* LAYOUT */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; flex: 1; }
+
+        /* NAVIGATION */
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; border-bottom: 2px solid #ff0066; flex-wrap: wrap; }
+        .nav a { font-size: 1.2rem; text-transform: uppercase; padding: 0.5rem 1rem; }
+        .nav a.active { background: #ff0066; color: #fff; }
+        .nav a.active:hover { background: #cc0052; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 30px; height: 3px; background: #ff0066; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; width: 100%; margin-top: 1rem; }
+            .nav-links.open { display: flex; }
+            .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid #333; }
+        }
+
+        /* HERO / POST */
+        .post-header { margin: 3rem 0 2rem; }
+        .post-meta { font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; }
+        .post-body { max-width: 800px; margin: 0 auto; }
+        .post-body p { font-size: 1.15rem; }
+        .cta-box { background: #1a1a1a; border-left: 8px solid #ffcc00; padding: 2rem; margin: 2rem 0; }
+        .cta-box a { font-size: 1.5rem; display: inline-block; margin-top: 0.5rem; }
+
+        /* FOOTER */
+        .footer { border-top: 2px solid #ff0066; padding: 2rem 0; margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #666; }
+        .footer a { color: #ff0066; }
+
+        /* TEL LINK */
+        .tel-link { background: #ff0066; color: #fff; padding: 0.8rem 2rem; display: inline-block; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; margin: 1rem 0; }
+        .tel-link:hover { background: #cc0052; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-links">
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/blog" class="active">블로그</a>
+                <a href="/contact">연락처</a>
+            </div>
+            <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+        </nav>
+
+        <article class="post-header">
+            <p class="post-meta">2025.04.22 | 서버 웜업 인사이트</p>
+            <h1>기다림은 끝났다<br>마포 셔츠룸이 정의하는 웜업</h1>
+        </article>
+
+        <div class="post-body">
+            <p>서버 웜업. 들어는 봤지만 진짜가 뭔지 아는 사람은 드물다. <strong>마포 셔츠룸</strong>은 그 빈 껍데기를 깨부순다. 우리는 웜업을 기다림의 시간이 아니라, 폭발의 준비 단계로 재정의한다.</p>
+
+            <h2>왜 마포인가?</h2>
+            <p>강남? 논현? 거기는 이미 식상하다. 진짜는 마포다. 홍대의 에너지와 합정의 자유로움이 교차하는 지점. <strong>마포 셔츠룸</strong>은 그 중심에서 서버를 한계까지 밀어붙인다. 느린 웜업은 가라. 우리는 5초 안에 시스템을 각성시킨다.</p>
+
+            <div class="brutal-border-accent skewed">
+                <blockquote class="skewed-back" style="font-style: italic; font-size: 1.3rem; color: #ffcc00;">
+                    "진정한 웜업은 기계가 아닌, 공간이 만든다. 마포 셔츠룸은 그 공간 자체다."
+                </blockquote>
+            </div>
+
+            <h2>숫자가 말해준다</h2>
+            <p>서버 웜업 평균 시간: 45초. 마포 셔츠룸의 최적화 환경: 12초. <br>반응 속도: 300% 향상. 대기 시간: 90% 감소. <br>이게 가능한 이유는 단순하다. 우리는 절대 타협하지 않는다. 모든 라우터, 모든 스위치, 모든 케이블이 전장에 맞춰 세팅되어 있다.</p>
+
+            <div class="cta-box">
+                <p style="font-weight: bold; font-size: 1.2rem;">직접 체험하고 싶다면?</p>
+                <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+                <p style="margin-top: 1rem;">지금 전화를 걸어라. 기다림은 없다. 오직 웜업뿐.</p>
+            </div>
+
+            <h2>공간이 곧 성능이다</h2>
+            <p>좁고 답답한 셔츠룸은 잊어라. <strong>마포 셔츠룸</strong>의 인테리어는 그 자체로 브루탈리즘의 선언이다. 노출 콘크리트, 레드 네온, 무채색의 완벽한 조화. 이 공간은 당신의 집중력을 최고조로 끌어올린다. 서버를 다루는 건 기계가 아니라 인간이다. 인간이 최고의 퍼포먼스를 발휘하려면 환경이 받쳐줘야 한다.</p>
+
+            <h3>우리의 약속</h3>
+            <ul>
+                <li><strong>속도</strong> - 웜업 시간 단축, 즉시 연결</li>
+                <li><strong>안정성</strong> 24/7 모니터링, 99.8% 가동률</li>
+                <li><strong>자유도</strong> - 원하는 대로 커스터마이징 가능한 환경</li>
+            </ul>
+
+            <p>이제 선택은 당신의 몫이다. 계속해서 남들이 하는 대로 느린 웜업에 머물 것인가, 아니면 <strong>마포 셔츠룸</strong>에서 새로운 기준을 경험할 것인가. <br><a href="tel:01062790862" style="font-size: 1.4rem;">010-6279-0862</a> — 전화는 이미 받고 있다.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 마포 셔츠룸 | 서버 웜업의 새로운 기준 <br> 
+        <a href="tel:01062790862">010-6279-0862</a> | 
+        <a href="/privacy">개인정보 처리방침</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
+        // close menu on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
